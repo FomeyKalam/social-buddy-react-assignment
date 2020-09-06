@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 const CommentDetails = (props) => {
     const{name,email,body,image} = props;
+    
     const classes = useStyles();
     const StyleName = {
         color : '#e09915',

@@ -5,20 +5,22 @@ import ShowComment from '../ShowComment/ShowComment';
 const PostDetail = () => {
     
     const{id} = useParams();
-    const[comment, setComment] = useState([]) ;
+    const[comments, setComments] = useState([]) ;
     
 
     useEffect(()=>{
         const url = `https://jsonplaceholder.typicode.com/comments?postId=${id}` ;
         fetch(url)
         .then(res => res.json())
-        .then(data => setComment(data))
+        .then(data => setComments(data))
 
     })
     return (
         <div>
             {
-                comment.map(comment=> <ShowComment comment = {comment}></ShowComment>)
+                comments.map((comment,i)=> <ShowComment comment = {comment} i = {i}>
+
+                </ShowComment>)
             }
           
         </div>

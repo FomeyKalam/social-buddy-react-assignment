@@ -16,13 +16,13 @@ const ShowComment = (props) => {
        <div>
               {
              
-                image.map(image => <CommentDetails image ={image.img} 
+                 <CommentDetails image ={image[props.i].img} 
                                        name ={name}
                                        email ={email}
                                        body ={body}
                                        >
 
-                </CommentDetails>)
+                </CommentDetails>
                 
               } 
               
